@@ -1,0 +1,23 @@
+from google.adk.agents import Agent
+from google.adk.tools.agent_tool import AgentTool
+from google.adk.models.lite_llm import LiteLlm
+from .sub_agents.content_planner.agent import content_planner_agent
+from .sub_agents.asset_generator.agent import asset_generator_agent
+from .prompt import SHORTS_PRODUCER_DESCRIPTION, SHORTS_PRODUCER_PROMPT
+
+MODEL = LiteLlm(model="openai/gpt-4o")
+
+# Content Planner Agent에는 대화를 전달하지 않고, Tool로서만 사용됩니다.
+
+shorts_producer_agent = Agent(
+    name="ShortsProducerAgent",
+    model=MODEL,
+    description=SHORTS_PRODUCER_DESCRIPTION,
+    instruction=SHORTS_PRODUCER_PROMPT,
+    tools=[
+        AgentTool(agent=content_planner_agent),
+        AgentTool(agent=asset_generator_agent),
+    ],
+)
+
+root_agent = shorts_producer_agent
