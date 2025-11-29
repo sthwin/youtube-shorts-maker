@@ -41,11 +41,11 @@ You must return a valid JSON object with this structure:
 
 ## Guidelines:
 - **CRITICAL: Total Duration**: MAXIMUM 20 seconds - NEVER exceed this limit. Always verify the sum of all scene durations equals 20 or less.
-- **Scene Count**: Choose optimal number (3-6 scenes typically work best)
-- **Scene Duration**: Can vary (2-6 seconds each) based on content needs, but ensure total never exceeds 20 seconds
-- **Narration**: Match word count to scene duration (roughly 2-3 words per second)
+- **Scene Count**: Choose optimal number (3-6 scenes typically work best).
+- **Scene Duration**: Can vary (2-6 seconds each) based on content needs, but ensure total never exceeds 20 seconds.
+- **Narration**: Match word count to scene duration (roughly 2-3 words per second). 반드시 한글로 작성합니다.
 - **Visual descriptions**: Be specific and detailed for vertical image generation (mention lighting, composition, objects, vertical framing, etc.)
-- **Embedded text**: Can use various styles (uppercase, lowercase, mixed case). Keep it 2-8 words max, punchy and attention-grabbing. Match the style to the content tone. NO emojis.
+- **Embedded text**: Can use various styles (uppercase, lowercase, mixed case). Keep it 2-8 words max, punchy and attention-grabbing. Match the style to the content tone. NO emojis. 반드시 한글로 작성합니다.
 - **Text positioning**: Choose strategic locations that don't obstruct important visual elements. Consider the visual composition when selecting position.
 - **Flow**: Ensure scenes flow logically and tell a complete story
 - **Engagement**: Make it educational, entertaining, or tutorial-focused
